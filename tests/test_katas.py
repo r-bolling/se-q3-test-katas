@@ -1,10 +1,18 @@
 import unittest
-import katas
+import random
+from katas import *
 
 
 class TestKatas(unittest.TestCase):
     def test_add(self):
-        self.fail("TODO: Write add unit test")
+        '''Return the sum of two numbers'''
+        num = random.randrange(0, 10000)
+        num2 = random.randrange(0, 10000)
+        neg_num = random.randrange(-10000, 0)
+        neg_num2 = random.randrange(-10000, 0)
+        self.assertEqual(add(num, num2), num + num2)
+        self.assertEqual(add(neg_num, num2), neg_num + num2)
+        self.assertEqual(add(neg_num, neg_num2), neg_num + neg_num2)
 
     def test_multiply(self):
         self.fail("TODO: Write multiply unit test")
