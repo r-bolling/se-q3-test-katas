@@ -15,7 +15,15 @@ class TestKatas(unittest.TestCase):
         self.assertEqual(add(neg_num, neg_num2), neg_num + neg_num2)
 
     def test_multiply(self):
-        self.fail("TODO: Write multiply unit test")
+        '''Return the product of two numbers'''
+        num = random.randrange(0, 10000)
+        num2 = random.randrange(0, 10000)
+        neg_num = random.randrange(-10000, 0)
+        neg_num2 = random.randrange(-10000, 0)
+        self.assertEqual(multiply(num, num2), num * num2)
+        self.assertEqual(multiply(neg_num, num2), neg_num * num2)
+        self.assertEqual(multiply(neg_num, neg_num2), neg_num * neg_num2)
+        # self.fail("TODO: Write multiply unit test")
 
     def test_power(self):
         self.fail("TODO: Write power unit test")
